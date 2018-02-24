@@ -4,6 +4,14 @@ app.component('homepage',{
 });
 
 app.component('signup',{
+  controller : function($http,$scope){
+    this.signup = function(){
+      console.log(this.email);
+      console.log(this.nickname);
+      console.log(this.passwrd);
+      console.log(this.passwrdagain);
+    }
+  }
   templateUrl : './html/signup.html'
 });
 

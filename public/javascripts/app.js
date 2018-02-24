@@ -11,7 +11,7 @@ app.component('signup',{
       console.log(this.passwrd);
       console.log(this.passwrdagain);
     }
-  }
+  },
   templateUrl : './html/signup.html'
 });
 

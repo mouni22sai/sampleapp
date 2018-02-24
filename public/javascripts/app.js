@@ -7,6 +7,6 @@ app.component('signup',{
   templateUrl : './html/signup.html'
 });
 
-app.componnet('login',{
+app.component('login',{
   templateUrl : './html/login.html'
 });

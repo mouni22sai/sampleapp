@@ -4,19 +4,19 @@ app.factory('checkfields',[function(){
     console.log(fieldname);
     switch(fieldname) {
       case 'email' :
-        if(inpVal === undefined){
+        if(inpVal === undefined || inpVal === ""){
           bootbox.alert("Email id should be something");
         }else if(inpVal.indexOf('@gmail.com') === -1){
           bootbox.alert("Invalid email id, please try again :)");
         }
         break;
       case 'nick' :
-        if(inpVal === undefined){
+        if(inpVal === undefined || inpVal === ""){
           bootbox.alert("Please choose a nickname chintu :P");
         }
         break;
       case 'pass' :
-        if(inpVal === undefined){
+        if(inpVal === undefined|| inpVal === ""){
           bootbox.alert("password must not be empty");
         }else if(inpVal.length < 6){
           bootbox.alert("Password must contain minimum 6 characters");
@@ -43,7 +43,7 @@ app.component('signup',{
       checkfields('email',inpemail);
       checkfields('nick',inpnick);
       checkfields('pass',inppass,passagain);
-      
+
     }
   },
   templateUrl : './html/signup.html'

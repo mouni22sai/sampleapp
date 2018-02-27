@@ -23,8 +23,6 @@ app.use(bodyParser.json());
 
  app.post('/signup',function(req,res){
    rand = Math.floor((Math.random() * 100) + 54);
-   // hash = bcrypt.hashSync(rand, 8);
-   // console.log("hash key " + hash);
    host = req.get('host');
    console.log("Host -" + host);
    link = "http://" + req.get('host') + "/verify?id=" + rand;

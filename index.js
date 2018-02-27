@@ -3,7 +3,6 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
-var bcrypt = require('bcrypt');
 const PORT = process.env.PORT || 5000
 let smtpTransporter = nodemailer.createTransport('smtps://mounika.chitirala@gmail.com:AdhyanthaRahitham@smtp.gmail.com',{
   Service : "Gmail",

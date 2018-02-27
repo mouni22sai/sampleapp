@@ -40,10 +40,14 @@ app.component('signup',{
       let inpnick = globthis.nickname;
       let inppass = globthis.passwrd;
       let passagain = globthis.passwrdagain;
-      checkfields('email',inpemail);
+      console.log(checkfields('email',inpemail));
       checkfields('nick',inpnick);
       checkfields('pass',inppass,passagain);
-
+      $http.post('/signup',{email : globthis.email}).then(function(response){
+        console.log(response);
+      },function(err){
+        throw err;
+      });
     }
   },
   templateUrl : './html/signup.html'
